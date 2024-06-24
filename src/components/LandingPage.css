@@ -1,67 +1,70 @@
-.container-fluid {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-  }
-  
-  .nav ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-  }
-  
-  .nav a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    margin: 1rem 0;
-  }
-  
-  .cta-buttons .secondary {
-    background-color: #e74c3c;
-  }
-  
-  .sports {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .sport {
-    flex: 1 1 calc(33.333% - 1rem);
-    background-color: #444;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  .offers {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  
-  .offer {
-    flex: 1;
-    background-color: #fff;
-    color: #333;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  footer {
-    text-align: center;
-    margin-top: 2rem;
-  }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  hgroup {
-    background-image: url("../../public/HOFHeroSectionBackground.jpg");
-    background-size: contain;
-    height: 30em;
-    min-width: 100vw;
-  }
-  
+.container-fluid {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.cta-buttons .secondary {
+  background-color: #e74c3c;
+}
+
+.sports {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.sport {
+  flex: 1 1 calc(33.333% - 1rem);
+  background-color: #444;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.offers {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.offer {
+  flex: 1;
+  background-color: #fff;
+  color: #333;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+hgroup {
+  background-image: url("../assets/HOFHeroSectionBackground.jpg");
+  background-size: contain;
+  height: 30em;
+  min-width: 100vw;
+}

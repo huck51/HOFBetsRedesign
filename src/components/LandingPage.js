@@ -1,58 +1,43 @@
-import React from 'react';
-import './LandingPage.css';
+import React from "react";
+import "./LandingPage.css";
+import { Navbar } from "./Navbar";
+import { Hero } from "./Hero";
+import { IconCard } from "./IconCard";
+import NFL from "../assets/NFL_converted.png";
+import NHL from "../assets/NHL_converted.png";
+import MLB from "../assets/MLB_converted.png";
+import { PromoCard } from "./PromoCard";
+import { Footer } from "./Footer";
 
 const LandingPage = () => {
   return (
     <div>
-      <nav className="container-fluid">
-        <ul>
-          <li><strong>HEATS</strong></li>
-        </ul>
-        <ul>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Beta</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#" role="button">Get Started</a></li>
-        </ul>
-      </nav>
-      <main className="container">
+      <Navbar />
+      <main>
         <div className="grid">
           <section>
-            <hgroup>
-              <h2>HALL OF FAME BETS</h2>
-              <h3>Your Go-to Sports Betting Analytics Platform</h3>
-            </hgroup>
-            <div className="cta-buttons">
-              <button>Get Started</button>
-              <button className="secondary">Get Support</button>
-            </div>
-            <div className="sports">
-              <div className="sport">
-                <img src="path_to_nba_image" alt="NBA" />
-                <p>NBA</p>
-              </div>
-              <div className="sport">
-                <img src="path_to_nhl_image" alt="NHL" />
-                <p>NHL</p>
-              </div>
-              <div className="sport">
-                <img src="path_to_mhl_image" alt="MHL" />
-                <p>MHL</p>
-              </div>
-              <div className="sport">
-                <img src="path_to_soccer_image" alt="Soccer" />
-                <p>Soccer</p>
-              </div>
-              <div className="sport">
-                <img src="path_to_nfl_image" alt="NFL" />
-                <p>NFL</p>
-              </div>
-              <div className="sport">
-                <img src="path_to_nbl_image" alt="NBL" />
-                <p>NBL</p>
-              </div>
+            <Hero />
+            <div className="cta-buttons"></div>
+            <div className="sports bg-secondary">
+              <IconCard iconName={MLB} leagueName="MLB" />
+              <IconCard iconName={NFL} leagueName="NFL" />
+              <IconCard iconName={NHL} leagueName="NHL" />
+              <IconCard iconName={MLB} leagueName="MLB" />
+              <IconCard iconName={MLB} leagueName="MLB" />
             </div>
             <div className="offers">
+              <PromoCard
+                title="JOIN NOW AND GET FIRST MONTH FREE"
+                message="OFFER CODE: FRESHBETS"
+              />
+              <PromoCard
+                title="JOIN NOW AND GET FIRST MONTH FREE"
+                message="OFFER CODE: FRESHBETS"
+              />
+              <PromoCard
+                title="JOIN NOW AND GET FIRST MONTH FREE"
+                message="OFFER CODE: FRESHBETS"
+              />
               <div className="offer">
                 <p>NBA</p>
                 <p>Get 1st month</p>
@@ -75,9 +60,7 @@ const LandingPage = () => {
           </section>
         </div>
       </main>
-      <footer className="container">
-        <small><a href="#">Terms</a> • <a href="#">Privacy</a></small>
-      </footer>
+      <Footer />
     </div>
   );
 };
