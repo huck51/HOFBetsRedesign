@@ -14,18 +14,18 @@ const LandingPage = () => {
     <div>
       <Navbar />
       <main>
-        <div className="grid">
+        <div className="grid bg-primary">
           <section>
             <Hero />
             <div className="cta-buttons"></div>
-            <div className="sports bg-secondary">
+            <div className="sports bg-primary -mt-8" style={{boxShadow: "35px 25px 25px 15px"}}>
               <IconCard iconName={MLB} leagueName="MLB" />
               <IconCard iconName={NFL} leagueName="NFL" />
               <IconCard iconName={NHL} leagueName="NHL" />
               <IconCard iconName={MLB} leagueName="MLB" />
               <IconCard iconName={MLB} leagueName="MLB" />
             </div>
-            <div className="offers">
+            <div className="bg-secondary offers">
               <PromoCard
                 title="JOIN NOW AND GET FIRST MONTH FREE"
                 message="OFFER CODE: FRESHBETS"
@@ -38,24 +38,6 @@ const LandingPage = () => {
                 title="JOIN NOW AND GET FIRST MONTH FREE"
                 message="OFFER CODE: FRESHBETS"
               />
-              <div className="offer">
-                <p>NBA</p>
-                <p>Get 1st month</p>
-                <p>$14.99</p>
-                <p>with code: 50FF</p>
-              </div>
-              <div className="offer">
-                <p>Get Started</p>
-                <p>1st month</p>
-                <p>$14.99</p>
-                <p>with code: 50FF</p>
-              </div>
-              <div className="offer">
-                <p>Soccer</p>
-                <p>Sign up</p>
-                <p>$4.99</p>
-                <p>with code: 50FF</p>
-              </div>
             </div>
           </section>
         </div>

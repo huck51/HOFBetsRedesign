@@ -9,11 +9,11 @@ module.exports = {
     themes: [
       {
         hofdark: {
-          primary: "#1A202C",
-          secondary: "#2D3748",
-          accent: "#E53E3E",
-          neutral: "#F7FAFC",
-          "base-100": "#2D3748",
+          primary: "#151A22",
+          secondary: "#5F7285",
+          accent: "#262D3B",
+          neutral: "#7A7A7C",
+          "base-100": "#FFFFFF",
         },
       },
       "cupcake",

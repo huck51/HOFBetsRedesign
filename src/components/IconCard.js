@@ -1,7 +1,7 @@
 export const IconCard = (props) => {
   return (
-    <div className="card bg-base-100 w-96 shadow-xl">
-      <figure className="px-10 pt-10">
+    <div className="card bg-secondary w-50 shadow-xl">
+      <figure className="px-15 pt-15">
         <img src={props.iconName} alt="Shoes" className="rounded-xl" />
       </figure>
       <div className="card-body items-center text-center">
