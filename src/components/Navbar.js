@@ -52,7 +52,7 @@ export const Navbar = () => {
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        {/* <ul className="menu menu-horizontal px-1">
           <li>
             <a>Item 1</a>
           </li>
@@ -72,7 +72,7 @@ export const Navbar = () => {
           <li>
             <a>Item 3</a>
           </li>
-        </ul>
+        </ul> */}
       </div>
       <div className="navbar-end">
         <a className="btn">My Account</a>
