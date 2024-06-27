@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { TextSkeleton } from "./TextSkeleton";
 
 export const VideoAnalyzer = () => {
   const [url, setUrl] = useState("");
   const [breakdownTxt, setBreakdownTxt] = useState("");
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleChange = (e) => {
     setUrl(e.target.value);
@@ -12,13 +14,16 @@ export const VideoAnalyzer = () => {
   const handleSubmit = (e) => {
     const videoId = url.split("?v=")[1];
     setBreakdownTxt('')
+    setIsLoading(true)
     axios
       .get(`http://127.0.0.1:8000/fabrichof/${videoId}/`)
       .then((response) => {
         const content = response.data.response.replaceAll('-', '\n\n -')
+        setIsLoading(false)
         setBreakdownTxt(content)
       })
       .catch((err) => {
+        setIsLoading(false)
         console.log(err);
       });
   };
@@ -48,6 +53,11 @@ export const VideoAnalyzer = () => {
       </div>
       <div className="mockup-window bg-base-300 border">
         <div className="bg-base-200 flex justify-center px-4 py-16">
+            {
+                isLoading ? <div className="join join-horizontal xs:join-vertical">
+                <TextSkeleton />
+              </div> : <></>
+            }
             <p>{breakdownTxt}</p>
         </div>
     </div>
